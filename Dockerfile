@@ -26,10 +26,12 @@ RUN R -e "install.packages(c('shiny', 'shinydashboard', 'dplyr','lubridate','pro
 
 # Copy configuration files into the Docker image
 COPY ./shiny-server.conf  /etc/shiny-server/shiny-server.conf
-COPY ./sf /srv/shiny-server/
+COPY ./data /srv/shiny-server/
+COPY ./app.R /srv/shiny-server/
+COPY ./www /srv/shiny-server/
 
-# Make the ShinyApp available at port 80
-EXPOSE 80
+# Make the ShinyApp available at port 8080
+EXPOSE 8080
 
 # Copy further configuration files into the Docker image
 COPY ./shiny-server.sh /usr/bin/shiny-server.sh
