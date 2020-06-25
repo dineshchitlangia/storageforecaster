@@ -10,3 +10,7 @@ Steps to execute
 2. Execute runForecaster.sh 
 
 3. Open browser and navigate to localhost:8080
+
+TODO:
+1. Improve accuracy of prediction by cross validation
+2. Options to address anomalies/holiday.
